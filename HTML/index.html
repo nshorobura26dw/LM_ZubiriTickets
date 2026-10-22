@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,104 +7,109 @@
     <title>ZubiriTickets NazariiShorobura</title>
 </head>
 <body>
-    <header>
-        <img src="/Recursos/images/logo.png" width="50px" height="50px">
-        <h3>Entradas Zubiri - ¡Encuentra a tus artistas favoritos y compra entradas!</h3>
-        <img src="/Recursos/images/facebook.png" width="25px" height="25px">
-        <img src="/Recursos/images/twitter.png" width="25px" height="25px">
-        <img src="/Recursos/images/instagram.png" width="25px" height="25px">
 
+    <!-- 1. ELEMENTO COMÚN: Encabezado (El logo ahora es un enlace al index) -->
+    <header>
+        <a href="index.html">
+            <img src="/Recursos/images/logo.png" width="75px" height="50px" alt="Logo Zubiri Tickets">
+        </a>
+        <h3>Entradas Zubiri - ¡Encuentra a tus artistas favoritos y compra entradas!</h3>
+        <div class="redes-sociales">
+            <a href="https://facebook.com" target="_blank"><img src="/Recursos/images/facebook.png" width="25px" height="25px" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="/Recursos/images/twitter.png" width="25px" height="25px" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="/Recursos/images/instagram.png" width="25px" height="25px" alt="Instagram"></a>
+        </div>
     </header>
     
-    <div class="contenedor-principal">
-        
-        <!-- SECCIÓN DE INTRODUCCIÓN DE DATOS (Las 3 cajas azules del PDF) -->
-        <section class="comun1">
-            <div class="caja-formulario">
-                <h4>Suscríbete a nuestro boletín</h4>
-                <p>Introduce tu correo electrónico</p>
-                <input type="email" placeholder="xxxxx@xxxxx.xxx" required>
-                <button type="submit">Suscribirse</button>
-            </div>
-            
-            <div class="caja-formulario">
-                <h4>Artistas destacados</h4>
-                <p>Elige un artista</p>
-                <select required>
-                    <option value="">Elige un artista</option>
-                    <option value="slipknot">Slipknot</option>
-                    <option value="machine-head">Machine Head</option>
-                    <option value="acdc">AC/DC</option>
-                </select>
-            </div>
-            
-            <div class="caja-formulario">
-                <h4>Acceso</h4>
-                <p>Usuario</p>
-                <input type="text" placeholder="Introduce tu usuario" required>
-                <p>Contraseña</p>
-                <input type="password" placeholder="Introduce tu contraseña" required>
-                <button type="submit">Entrar</button>
-            </div>
-        </section>
-
-        <!-- PARTE CENTRAL Y PARTE DERECHA (Organizadas juntas) -->
-        <div class="contenido-web">
-            
-            <!-- CONTENIDO CENTRAL (Cambia en cada página) -->
-            <main class="seccion-central">
-                <h3 class="titulo-parpadeo">Últimas noticias</h3>
-                
-                <article>
-                    <p class="fecha">2025-11-11</p>
-                    <p class="subtitulo">Slipknot 5: Capítulo gris</p>
-                    <p>Slipknot 5: "The grey chapter" acaba de publicarse, el primer disco desde "All Hope Is Gone". Es el primer disco con dos nuevos miembros, tras la muerte del bajista y la salida de Joey Jordison del grupo.</p>
-                </article>
-                
-                <article>
-                    <p class="fecha">2025-11-10</p>
-                    <p class="subtitulo">Bloodstone & Diamonds</p>
-                    <p>El nuevo disco de Machine Head ya está en la calle. La banda ha anunciado que harán una gira para presentarlo, pero evitarán grandes recintos porque se sentían "un poco quemados" en ese tipo de conciertos.</p>
-                </article>
-                
-                <article>
-                    <p class="fecha">2025-11-09</p>
-                    <p class="subtitulo">AC/DC: Salida de Malcolm y nuevo disco</p>
-                    <p>AC/DC ha anunciado que Malcolm Young dejará la banda indefinidamente tras ser diagnosticado con demencia, lo que le impidió tocar la guitarra. Su sobrino tomará su lugar. Además, la banda anuncia el nuevo disco "Rock or Bust", que se lanzará el 2 de diciembre.</p>
-                </article>
-            </main>
-
-            <!-- PARTE DERECHA (Menú y Próximos Conciertos) -->
-            <aside class="columna-derecha">
-                <nav class="menu-lateral">
-                    <h4>Menú</h4>
-                    <ul>
-                        <li><a href="index.html" class="activo">Últimas noticias</a></li>
-                        <li><a href="prox_conciertos.html">Próximos conciertos</a></li>
-                        <li><a href="videos.html">Galería de vídeos</a></li>
-                        <li><a href="audios.html">Galería de audio</a></li>
-                        <li><a href="fotos.html">Galería de fotos</a></li>
-                        <li><a href="compra_entradas.html">Comprar entradas</a></li>
-                    </ul>
-                </nav>
-
-                <div class="proximos-conciertos">
-                    <h4>Próximos conciertos</h4>
-                    <ul>
-                        <li>Machine Head - 16 Nov</li>
-                        <li>Rolling Stones - 5 Dic</li>
-                        <li>U2 - 25 Ene</li>
-                        <li>Iron Maiden - 6 Feb</li>
-                        <li>AC/DC - 21 Abr</li>
-                        <li>Airbourne - 10 May</li>
-                        <li>Marilyn Manson - 29 Ago</li>
-                    </ul>
-                </div>
-            </aside>
+    <!-- 2. ELEMENTO COMÚN: Sección de introducción de datos (Las 3 cajas azules) -->
+    <section class="comun1">
+        <div class="caja-formulario">
+            <h4>Suscríbete a nuestro boletín</h4>
+            <p>Introduce tu correo electrónico</p>
+            <input type="email" placeholder="xxxxx@xxxxx.xxx" required>
+            <button type="submit">Suscribirse</button>
         </div>
+        
+        <div class="caja-formulario">
+            <h4>Artistas destacados</h4>
+            <p>Elige un artista</p>
+            <select required>
+                <option value="">Elige un artista</option>
+                <option value="slipknot">Slipknot</option>
+                <option value="machine-head">Machine Head</option>
+                <option value="acdc">AC/DC</option>
+            </select>
+        </div>
+        
+        <div class="caja-formulario">
+            <h4>Acceso</h4>
+            <p>Usuario</p>
+            <input type="text" placeholder="Introduce tu usuario" required>
+            <p>Contraseña</p>
+            <input type="password" placeholder="Introduce tu contraseña" required>
+            <button type="submit">Entrar</button>
+        </div>
+    </section>
+
+    <!-- 3. ZONA FLEXBOX INFERIOR: Une la parte central con la columna derecha común -->
+    <div class="contenedor-flexible-inferior">
+        
+        <!-- PARTE CENTRAL: Esto es lo ÚNICO que cambiará en las otras páginas web -->
+        <main class="seccion-central">
+            <h3 class="titulo-parpadeo">Últimas noticias</h3>
+            
+            <article>
+                <p class="fecha">2025-11-11</p>
+                <p class="subtitulo">Slipknot 5: Capítulo gris</p>
+                <p>Slipknot 5: "The grey chapter" acaba de publicarse, el primer disco desde "All Hope Is Gone". Es el primer disco con dos nuevos miembros, tras la muerte del bajista y la salida de Joey Jordison del grupo.</p>
+            </article>
+            
+            <article>
+                <p class="fecha">2025-11-10</p>
+                <p class="subtitulo">Bloodstone & Diamonds</p>
+                <p>El nuevo disco de Machine Head ya está en la calle. La banda ha anunciado que harán una gira para presentarlo, pero evitarán grandes recintos porque se sentían "un poco quemados" en ese tipo de conciertos.</p>
+            </article>
+            
+            <article>
+                <p class="fecha">2025-11-09</p>
+                <p class="subtitulo">AC/DC: Salida de Malcolm y nuevo disco</p>
+                <p>AC/DC ha anunciado que Malcolm Young dejará la banda indefinidamente tras ser diagnosticado con demencia, lo que le impidió tocar la guitarra. Su sobrino tomará su lugar. Además, la banda anuncia el nuevo disco "Rock or Bust", que se lanzará el 2 de diciembre.</p>
+            </article>
+        </main>
+
+        <!-- PARTE DERECHA (ELEMENTO COMÚN): Va suelto al mismo nivel que el <main> -->
+        <aside class="columna-derecha">
+            <nav class="menu-lateral">
+                <h4>Menú</h4>
+                <ul>
+                    <li><a href="index.html" class="activo">Últimas noticias</a></li>
+                    <li><a href="prox_conciertos.html">Próximos conciertos</a></li>
+                    <li><a href="videos.html">Galería de vídeos</a></li>
+                    <li><a href="audios.html">Galería de audio</a></li>
+                    <li><a href="fotos.html">Galería de fotos</a></li>
+                    <li><a href="compra_entradas.html">Comprar entradas</a></li>
+                </ul>
+            </nav>
+
+            <div class="proximos-conciertos">
+                <h4>Próximos conciertos</h4>
+                <ul>
+                    <li>Machine Head - 16 Nov</li>
+                    <li>Rolling Stones - 5 Dic</li>
+                    <li>U2 - 25 Ene</li>
+                    <li>Iron Maiden - 6 Feb</li>
+                    <li>AC/DC - 21 Abr</li>
+                    <li>Airbourne - 10 May</li>
+                    <li>Marilyn Manson - 29 Ago</li>
+                </ul>
+            </div>
+            
+            <!-- Espacio libre por si el vídeo/diseño muestra la foto del artista de la semana aquí -->
+        </aside>
 
     </div>
 
+    <!-- 4. ELEMENTO COMÚN: Pie de página -->
     <footer>
         <div class="enlaces-footer">
             <a href="#">TÉRMINOS & CONDICIONES</a>
@@ -117,5 +122,6 @@
             © 2025 - Nazarii Shorobura
         </div>
     </footer>
+
 </body>
 </html>
