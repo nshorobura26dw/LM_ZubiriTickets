@@ -64,3 +64,13 @@ header .redes-sociales {
     color: white;
     font-size: 0.9rem;
 }
+
+.fecha {
+    color: white;
+    font-weight: 400;
+}
+
+p.fecha {
+    color: white;
+    font-weight: 400;
+}
