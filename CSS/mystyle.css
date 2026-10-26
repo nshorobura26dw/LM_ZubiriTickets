@@ -74,3 +74,88 @@ p.fecha {
     color: white;
     font-weight: 400;
 }
+
+/* ==========================================================================
+   5. ZONA FLEXBOX INFERIOR (Alineación de Columnas)
+   ========================================================================== */
+
+/* Esto obliga al contenido central y al aside a ponerse de lado a lado */
+.contenedor-flexible-inferior {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    padding: 30px 40px;
+    gap: 40px; /* Deja una separación limpia entre las noticias y el menú */
+    background-image: url('../Recursos/images/bg4.jpg');
+
+    /* 1. EVITA QUE SE RECOPIE O SE REPITA */
+    background-repeat: no-repeat;
+    
+    /* 2. OBLIGA A LA IMAGEN A CUBRIR TODO EL FONDO SIN DEFORMARSE */
+    background-size: cover;
+    
+    /* 3. CENTRA LA IMAGEN PARA QUE SE VEA PERFECTA */
+    background-position: center;
+}
+
+/* La zona de las noticias toma la mayor parte de la pantalla (3 partes) */
+.seccion-central {
+    flex: 3;
+}
+
+/* La columna derecha se queda fija en su sitio con un tamaño menor (1 parte) */
+.columna-derecha {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Separa el bloque Menú del bloque Conciertos */
+}
+
+/* Estilo para los bloques del Menú y los Conciertos */
+.menu-lateral {
+    background-color: #1a4f8a; /* Azul corporativo para el bloque de navegación */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+/* Bloque de Próximos Conciertos */
+.proximos-conciertos {
+    background-color: rgba(30, 70, 120, 0.9); /* Azul un poco más oscuro y denso */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+/* Títulos del menú y conciertos para darles la tipografía del PDF */
+.columna-derecha h4 {
+    font-family: 'Font 1';
+    color: white;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Quitamos los puntitos por defecto de las listas */
+.columna-derecha ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.columna-derecha li {
+    margin-bottom: 12px;
+}
+
+/* Estilos de los enlaces del menú */
+.menu-lateral a {
+    color: #b9cde5;
+    text-decoration: none;
+}
+
+/* REQUISITO DEL PDF: Al pasar el ratón por encima del menú */
+.menu-lateral a:hover {
+    font-style: italic; /* Texto en cursiva */
+    color: white;       /* Texto en color blanco */
+}
