@@ -8,6 +8,12 @@
     src: url('../Recursos/fonts/general.ttf');
 }
 
+@keyframes parpadeo {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 body {
     margin: 0;
     font-family: 'Font 2'; 
@@ -103,6 +109,15 @@ p.fecha {
     flex: 3;
 }
 
+.seccion-central h3 {
+    color: white;
+    animation: parpadeo 1s infinite;
+}
+
+.seccion-central p {
+    color: white;
+}
+
 /* La columna derecha se queda fija en su sitio con un tamaño menor (1 parte) */
 .columna-derecha {
     flex: 1;
@@ -114,7 +129,7 @@ p.fecha {
 
 /* Estilo para los bloques del Menú y los Conciertos */
 .menu-lateral {
-    background-color: #1a4f8a; /* Azul corporativo para el bloque de navegación */
+    background-color: rgba(24, 94, 180, 0.9); /* Azul corporativo para el bloque de navegación */
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 20px;
     border-radius: 4px;
@@ -122,10 +137,15 @@ p.fecha {
 
 /* Bloque de Próximos Conciertos */
 .proximos-conciertos {
-    background-color: rgba(30, 70, 120, 0.9); /* Azul un poco más oscuro y denso */
+    background-color: rgba(24, 94, 180, 0.9); /* Azul un poco más oscuro y denso */
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 20px;
     border-radius: 4px;
+}
+
+.columna-derecha {
+    background-color: rgba(192, 189, 189, 0.6);
+    display: flex;
 }
 
 /* Títulos del menú y conciertos para darles la tipografía del PDF */
@@ -146,16 +166,48 @@ p.fecha {
 
 .columna-derecha li {
     margin-bottom: 12px;
+    color: black;
 }
 
 /* Estilos de los enlaces del menú */
 .menu-lateral a {
-    color: #b9cde5;
+    color: #000000;
     text-decoration: none;
 }
 
 /* REQUISITO DEL PDF: Al pasar el ratón por encima del menú */
 .menu-lateral a:hover {
-    font-style: italic; /* Texto en cursiva */
-    color: white;       /* Texto en color blanco */
+    font-style: italic; 
+    color: white;       
 }
+
+.proximos-conciertos li:hover {
+    font-style: italic; 
+    color: white;  
+}
+
+footer {
+    background-color: rgba(49, 49, 49, 0.82);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-family: 'Font 1'; 
+    margin-top: auto; 
+}
+
+.enlaces-footer {
+    display:flex;
+    gap: 20px;
+}
+
+.enlaces-footer a {
+    color: #fcfcfc;
+    font-family: 'Font 1';
+    font-size: 20px;
+}
+
+.enlaces-footer a:hover {
+    color: red;
+}
+
