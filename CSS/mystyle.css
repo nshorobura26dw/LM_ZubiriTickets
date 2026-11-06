@@ -1,3 +1,5 @@
+/* 1. Fuentes y Animaciones */
+
 @font-face {
     font-family: 'Font 1';
     src: url('../Recursos/fonts/encabezado_pie.otf');
@@ -8,23 +10,39 @@
     src: url('../Recursos/fonts/general.ttf');
 }
 
+/* Parpadeo*/
 @keyframes parpadeo {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
+
+
+/* 2. Estilos generales del body */
 
 body {
     margin: 0;
-    font-family: 'Font 2'; 
+    font-family: 'Font 2';
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #0b5394; 
+    background-color: #0b5394;
 }
+
+
+/* 3. Header (elemento común) */
 
 header {
     background-color: rgba(78, 2, 255, 0.733);
+    /* Tu color original */
     font-family: 'Font 1';
     height: 100px;
     display: flex;
@@ -44,8 +62,11 @@ header .redes-sociales {
     align-items: center;
 }
 
+
+/* 4. Sección superior de datos (elemento común) */
+
 .comun1 {
-    background-color: rgb(99, 117, 167); 
+    background-color: rgb(99, 117, 167);
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -53,7 +74,8 @@ header .redes-sociales {
 }
 
 .caja-formulario {
-    background-color: rgba(88, 146, 239, 0.82); 
+    /* Fondo azul transparente */
+    background-color: rgba(88, 146, 239, 0.82);
     padding: 20px;
     border-radius: 5px;
     width: 280px;
@@ -71,40 +93,49 @@ header .redes-sociales {
     font-size: 0.9rem;
 }
 
-.fecha {
-    color: white;
-    font-weight: 400;
+/* Estilo limpio para los campos de texto y selects dentro de las cajas */
+.caja-formulario input,
+.caja-formulario select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
 }
 
-p.fecha {
+/* Botones con cambio a color gris al pasar el ratón */
+.caja-formulario button {
+    background-color: #333;
     color: white;
-    font-weight: 400;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
 }
 
-/* ==========================================================================
-   5. ZONA FLEXBOX INFERIOR (Alineación de Columnas)
-   ========================================================================== */
+.caja-formulario button:hover {
+    background-color: gray;
+    /* Requisito del PDF */
+}
 
-/* Esto obliga al contenido central y al aside a ponerse de lado a lado */
+
+/* 5. Contenedor principal inferior */
+
 .contenedor-flexible-inferior {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-between;
     padding: 30px 40px;
-    gap: 40px; /* Deja una separación limpia entre las noticias y el menú */
+    gap: 40px;
     background-image: url('../Recursos/images/bg4.jpg');
-
-    /* 1. EVITA QUE SE RECOPIE O SE REPITA */
     background-repeat: no-repeat;
-    
-    /* 2. OBLIGA A LA IMAGEN A CUBRIR TODO EL FONDO SIN DEFORMARSE */
     background-size: cover;
-    
-    /* 3. CENTRA LA IMAGEN PARA QUE SE VEA PERFECTA */
     background-position: center;
 }
 
-/* La zona de las noticias toma la mayor parte de la pantalla (3 partes) */
+/* Sección main (La que cambia) */
 .seccion-central {
     flex: 3;
 }
@@ -112,43 +143,54 @@ p.fecha {
 .seccion-central h3 {
     color: white;
     animation: parpadeo 1s infinite;
+    font-size: 1.5rem;
 }
 
 .seccion-central p {
     color: white;
 }
 
-/* La columna derecha se queda fija en su sitio con un tamaño menor (1 parte) */
+p.fecha {
+    color: white;
+    font-weight: 400;
+}
+
+/* Líneas de próximos conciertos */
+.seccion-central p.texto-concierto {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    /* Separación */
+    line-height: 1.4;
+}
+
+/* Columna derecha (Menú, Conciertos y Artista) */
 .columna-derecha {
     flex: 1;
     min-width: 280px;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Separa el bloque Menú del bloque Conciertos */
+    gap: 20px;
+
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 15px;
+    border-radius: 8px;
 }
 
-/* Estilo para los bloques del Menú y los Conciertos */
-.menu-lateral {
-    background-color: rgba(24, 94, 180, 0.9); /* Azul corporativo para el bloque de navegación */
-    border: 1px solid rgba(255, 255, 255, 0.3);
+/* Cajas del lado derecho */
+.menu-lateral,
+.proximos-conciertos,
+.artista-semana {
+    background-color: rgba(88, 146, 239, 0.85);
+    /* Azul como el de las cajas superiores */
+    border: 2px solid #6fa8dc;
+    /* Borde azul más claro y brillante */
+    box-shadow: 0 0 10px rgba(111, 168, 220, 0.5);
+    /* Resplandor suave hacia afuera */
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
-/* Bloque de Próximos Conciertos */
-.proximos-conciertos {
-    background-color: rgba(24, 94, 180, 0.9); /* Azul un poco más oscuro y denso */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 20px;
-    border-radius: 4px;
-}
-
-.columna-derecha {
-    background-color: rgba(192, 189, 189, 0.6);
-    display: flex;
-}
-
-/* Títulos del menú y conciertos para darles la tipografía del PDF */
 .columna-derecha h4 {
     font-family: 'Font 1';
     color: white;
@@ -157,7 +199,6 @@ p.fecha {
     font-size: 1.3rem;
 }
 
-/* Quitamos los puntitos por defecto de las listas */
 .columna-derecha ul {
     list-style: none;
     padding: 0;
@@ -169,22 +210,40 @@ p.fecha {
     color: black;
 }
 
-/* Estilos de los enlaces del menú */
 .menu-lateral a {
     color: #000000;
     text-decoration: none;
 }
 
-/* REQUISITO DEL PDF: Al pasar el ratón por encima del menú */
+/* Efectos al pasar el ratón en la barra lateral */
+/* Efecto hover en el menú */
 .menu-lateral a:hover {
-    font-style: italic; 
-    color: white;       
+    font-style: italic;
+    color: white;
+}
+
+/* El icono de la guitarra */
+.menu-lateral a:hover::before {
+    content: url("/Recursos/images/pointer.png");
+    margin-right: 8px;
 }
 
 .proximos-conciertos li:hover {
-    font-style: italic; 
-    color: white;  
+    font-style: italic;
+    color: white;
 }
+
+.proximos-conciertos li:hover::before {
+    content: url("/Recursos/images/pointer.png");
+    margin-right: 8px;
+}
+
+/* Estilo para la foto del artista de la semana */
+.artista-semana img {
+    border-radius: 4px;
+    margin-top: 10px;
+}
+/* 6. FOOTER (Elemento común) */
 
 footer {
     background-color: rgba(49, 49, 49, 0.82);
@@ -192,12 +251,12 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    font-family: 'Font 1'; 
-    margin-top: auto; 
+    font-family: 'Font 1';
+    margin-top: auto;
 }
 
 .enlaces-footer {
-    display:flex;
+    display: flex;
     gap: 20px;
 }
 
@@ -205,9 +264,242 @@ footer {
     color: #fcfcfc;
     font-family: 'Font 1';
     font-size: 20px;
+    text-decoration: none;
 }
 
 .enlaces-footer a:hover {
     color: red;
 }
 
+
+/* 7. Responsive */
+
+@media (max-width: 768px) {
+
+    /* Ocultar iconos de redes sociales en pantalla pequeña */
+    header .redes-sociales {
+        display: none;
+    }
+
+    /* Poner la sección de datos y la zona principal en 1 sola columna vertical */
+    .comun1,
+    .contenedor-flexible-inferior {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .columna-derecha {
+        width: 100%;
+    }
+}
+
+/* Galería de vídeos */
+
+/* Centra el título, subtítulos y vídeos dentro de la columna central */
+.galeria-videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Espaciado entre cada bloque de vídeo */
+.bloque-video {
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Títulos individuales sobre cada vídeo */
+.titulo-video {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Ajuste del reproductor de vídeo */
+.galeria-videos video {
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Galería de audios */
+
+/* Centra el título, subtítulos y reproductores de audio */
+.galeria-audios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contenedor de cada audio con margen inferior */
+.bloque-audio {
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Nombres de las canciones */
+.titulo-audio {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Ancho del reproductor de audio */
+.galeria-audios audio {
+    width: 80%;
+    max-width: 500px;
+    /* Evita que el reproductor se estire demasiado en pantallas anchas */
+}
+
+/* Galería de fotos */
+
+/* Alineación general a la izquierda para esta sección */
+.galeria-fotos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Alinea el título a la izquierda */
+}
+
+/* Título de fotos más pequeño y colocado en la esquina superior izquierda */
+.galeria-fotos .titulo-fotos {
+    font-size: 1rem;
+    color: #ccc; 
+    animation: none;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Cuadrícula de fotos */
+.grid-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que se adapten si no caben */
+    gap: 10px;
+    /* Separación entre fotos */
+    justify-content: flex-start;
+}
+
+/* Estilo de cada imagen */
+.grid-fotos img {
+    width: 22%;
+    /* 4 fotos por fila (con el gap suma ~100%) */
+    min-width: 140px;
+    /* REQUISITO PDF: Evita que se reduzcan demasiado en móviles */
+    height: 280px;
+    object-fit: cover;
+    /* Mantiene la proporción de la foto sin deformarla */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* ESTILOS ESPECÍFICOS: COMPRAR ENTRADAS (compra_entradas.html) */
+
+/* Centrado general de la zona central */
+.compra-entradas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Título */
+.compra-entradas .titulo-compra {
+    font-size: 1.8rem;
+    font-family: 'Font 1';
+    color: #ccc;
+    /* Tono gris como en las fotos y la captura */
+    animation: none;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.subtitulo-compra {
+    color: white;
+    font-family: 'Font 1';
+    font-size: 1.4rem;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* Formulario y recuadro fieldset */
+.formulario-pedido {
+    width: 100%;
+    max-width: 450px;
+}
+
+.formulario-pedido fieldset {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    padding: 25px 20px;
+}
+
+.formulario-pedido legend {
+    color: white;
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+/* Filas alineadas con espacio entre etiqueta e input */
+.fila-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.fila-form label {
+    color: white;
+    font-size: 1.1rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.fila-form select,
+.fila-form input[type="date"] {
+    width: 220px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.fila-form input[type="range"] {
+    flex: 1;
+}
+
+.valor-entradas {
+    color: white;
+    font-size: 1.1rem;
+    min-width: 20px;
+}
+
+/* Botón de envío */
+.fila-boton {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.formulario-pedido button {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.formulario-pedido button:hover {
+    background-color: gray;
+    color: white;
+}

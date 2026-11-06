@@ -7,8 +7,7 @@
     <title>ZubiriTickets NazariiShorobura</title>
 </head>
 <body>
-
-    <!-- 1. ELEMENTO COMÚN: Encabezado (El logo ahora es un enlace al index) -->
+    <!-- 1. Elemento común: Encabezado (El logo es un enlace al index) -->
     <header>
         <a href="index.html">
             <img src="/Recursos/images/logo.png" width="75px" height="50px" alt="Logo Zubiri Tickets">
@@ -21,7 +20,7 @@
         </div>
     </header>
     
-    <!-- 2. ELEMENTO COMÚN: Sección de introducción de datos (Las 3 cajas azules) -->
+    <!-- 2. Elemento común: Sección de introducción de datos -->
     <section class="comun1">
         <div class="caja-formulario">
             <h4>Suscríbete a nuestro boletín</h4>
@@ -38,6 +37,11 @@
                 <option value="slipknot">Slipknot</option>
                 <option value="machine-head">Machine Head</option>
                 <option value="acdc">AC/DC</option>
+                <option value="iron">Iron Maiden</option>
+                <option value="airbourne">Airbourne</option>
+                <option value="marilyn">Marilyn Manson</option>
+                <option value="stones">Rolling Stones</option>
+                <option value="u2">U2</option>
             </select>
         </div>
         
@@ -51,10 +55,10 @@
         </div>
     </section>
 
-    <!-- 3. ZONA FLEXBOX INFERIOR: Une la parte central con la columna derecha común -->
+    <!-- 3. Zona inferior: la parte central y la columna derecha común -->
     <div class="contenedor-flexible-inferior">
         
-        <!-- PARTE CENTRAL: Esto es lo ÚNICO que cambiará en las otras páginas web -->
+        <!-- Parte central -->
         <main class="seccion-central">
             <h3 class="titulo-parpadeo">Últimas noticias</h3>
             
@@ -77,7 +81,7 @@
             </article>
         </main>
 
-        <!-- PARTE DERECHA (ELEMENTO COMÚN): Va suelto al mismo nivel que el <main> -->
+        <!-- Parte derecha (Elemento común): Está al mismo nivel que el <main> -->
         <aside class="columna-derecha">
             <nav class="menu-lateral">
                 <h4>Menú</h4>
@@ -103,13 +107,17 @@
                     <li>Marilyn Manson - 29 Ago</li>
                 </ul>
             </div>
-            
-            <!-- Espacio libre por si el vídeo/diseño muestra la foto del artista de la semana aquí -->
+
+            <div class="artista-semana">
+                <h4>Artista de la semana</h4>
+                <img src="/Recursos/images/zakk.jpg" alt="Zakk Wylde" width="100%">
+                <p>Black Label Society de Zakk Wylde</p>
+            </div>
         </aside>
 
     </div>
 
-    <!-- 4. ELEMENTO COMÚN: Pie de página -->
+    <!-- 4. Elemento común: Pie de página (Footer) -->
     <footer>
         <div class="enlaces-footer">
             <a href="#">TÉRMINOS & CONDICIONES</a>
@@ -122,6 +130,5 @@
             © 2025 - Nazarii Shorobura
         </div>
     </footer>
-
 </body>
 </html>

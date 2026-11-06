@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/mystyle.css">
+    <title>ZubiriTickets NazariiShorobura</title>
+</head>
+<body>
+    <!-- 1. ELEMENTO COMÚN: Encabezado (El logo ahora es un enlace al index) -->
+    <header>
+        <a href="index.html">
+            <img src="/Recursos/images/logo.png" width="75px" height="50px" alt="Logo Zubiri Tickets">
+        </a>
+        <h3>Entradas Zubiri - ¡Encuentra a tus artistas favoritos y compra entradas!</h3>
+        <div class="redes-sociales">
+            <a href="https://facebook.com" target="_blank"><img src="/Recursos/images/facebook.png" width="25px"
+                    height="25px" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="/Recursos/images/twitter.png" width="25px" height="25px"
+                    alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="/Recursos/images/instagram.png" width="25px"
+                    height="25px" alt="Instagram"></a>
+        </div>
+    </header>
+    
+    <!-- 2. ELEMENTO COMÚN: Sección de introducción de datos (Las 3 cajas azules) -->
+    <section class="comun1">
+        <div class="caja-formulario">
+            <h4>Suscríbete a nuestro boletín</h4>
+            <p>Introduce tu correo electrónico</p>
+            <input type="email" placeholder="xxxxx@xxxxx.xxx" required>
+            <button type="submit">Suscribirse</button>
+        </div>
+    
+        <div class="caja-formulario">
+            <h4>Artistas destacados</h4>
+            <p>Elige un artista</p>
+            <select required>
+                <option value="">Elige un artista</option>
+                <option value="slipknot">Slipknot</option>
+                <option value="machine-head">Machine Head</option>
+                <option value="acdc">AC/DC</option>
+                <option value="iron">Iron Maiden</option>
+                <option value="airbourne">Airbourne</option>
+                <option value="marilyn">Marilyn Manson</option>
+                <option value="stones">Rolling Stones</option>
+                <option value="u2">U2</option>
+            </select>
+        </div>
+    
+        <div class="caja-formulario">
+            <h4>Acceso</h4>
+            <p>Usuario</p>
+            <input type="text" placeholder="Introduce tu usuario" required>
+            <p>Contraseña</p>
+            <input type="password" placeholder="Introduce tu contraseña" required>
+            <button type="submit">Entrar</button>
+        </div>
+    </section>
+
+    <!-- 3. ZONA FLEXBOX INFERIOR: Une la parte central con la columna derecha común -->
+    <div class="contenedor-flexible-inferior">
+    
+        <!-- PARTE CENTRAL -->
+        <main class="seccion-central">
+            <h3 class="titulo-parpadeo">Próximos conciertos</h3>
+        
+            <article>
+                <p class="texto-concierto">Machine Head - 16 de noviembre - Sala Totem (Pamplona)</p>
+            </article>
+        
+            <article>
+                <p class="texto-concierto">Lizzy Borden - 18 de noviembre - DOKA (Donostia)</p>
+            </article>
+        
+            <article>
+                <p class="texto-concierto">Let's Zepp (Tribulo a Led Zeppelin) - 21 de noviembre - Ttunk (Irun)</p>
+            </article>
+        
+            <article>
+                <p class="texto-concierto">Iron Maiden - 25 de noviembre - Fever (Bilbao)</p>
+            </article>
+        
+            <article>
+                <p class="texto-concierto">Black Label Society - 2 de diciembre - Le Bukowski (Donostia)</p>
+            </article>
+        
+            <article>
+                <p class="texto-concierto">AC/DC - 31 de diciembre - Casa de Urko (Donostia)</p>
+            </article>
+        </main>
+    
+        <!-- PARTE DERECHA (ELEMENTO COMÚN): Va suelto al mismo nivel que el <main> -->
+        <aside class="columna-derecha">
+            <nav class="menu-lateral">
+                <h4>Menú</h4>
+                <ul>
+                    <li><a href="index.html" class="activo">Últimas noticias</a></li>
+                    <li><a href="prox_conciertos.html">Próximos conciertos</a></li>
+                    <li><a href="videos.html">Galería de vídeos</a></li>
+                    <li><a href="audios.html">Galería de audio</a></li>
+                    <li><a href="fotos.html">Galería de fotos</a></li>
+                    <li><a href="compra_entradas.html">Comprar entradas</a></li>
+                </ul>
+            </nav>
+    
+            <div class="proximos-conciertos">
+                <h4>Próximos conciertos</h4>
+                <ul>
+                    <li>Machine Head - 16 Nov</li>
+                    <li>Rolling Stones - 5 Dic</li>
+                    <li>U2 - 25 Ene</li>
+                    <li>Iron Maiden - 6 Feb</li>
+                    <li>AC/DC - 21 Abr</li>
+                    <li>Airbourne - 10 May</li>
+                    <li>Marilyn Manson - 29 Ago</li>
+                </ul>
+            </div>
+    
+            <div class="artista-semana">
+                <h4>Artista de la semana</h4>
+                <img src="/Recursos/images/zakk.jpg" alt="Zakk Wylde" width="100%">
+                <p>Black Label Society de Zakk Wylde</p>
+            </div>
+    
+            <!-- Espacio libre por si el vídeo/diseño muestra la foto del artista de la semana aquí -->
+        </aside>
+    
+    </div>
+    
+    <!-- 4. ELEMENTO COMÚN: Pie de página -->
+    <footer>
+        <div class="enlaces-footer">
+            <a href="#">TÉRMINOS & CONDICIONES</a>
+            <a href="#">PREGUNTAS FRECUENTES</a>
+            <a href="#">MÉTODOS DE PAGO</a>
+            <a href="#">SOBRE NOSOTROS</a>
+            <a href="#">CONTACTO</a>
+        </div>
+        <div class="autor-footer">
+            © 2025 - Nazarii Shorobura
+        </div>
+    </footer>
+</body>
+</html>
