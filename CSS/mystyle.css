@@ -27,7 +27,6 @@
 
 
 /* 2. Estilos generales del body */
-
 body {
     margin: 0;
     font-family: 'Font 2';
@@ -39,10 +38,8 @@ body {
 
 
 /* 3. Header (elemento común) */
-
 header {
     background-color: rgba(78, 2, 255, 0.733);
-    /* Tu color original */
     font-family: 'Font 1';
     height: 100px;
     display: flex;
@@ -63,8 +60,7 @@ header .redes-sociales {
 }
 
 
-/* 4. Sección superior de datos (elemento común) */
-
+/* 4. Sección de datos (elemento común) */
 .comun1 {
     background-color: rgb(99, 117, 167);
     display: flex;
@@ -74,7 +70,6 @@ header .redes-sociales {
 }
 
 .caja-formulario {
-    /* Fondo azul transparente */
     background-color: rgba(88, 146, 239, 0.82);
     padding: 20px;
     border-radius: 5px;
@@ -93,7 +88,7 @@ header .redes-sociales {
     font-size: 0.9rem;
 }
 
-/* Estilo limpio para los campos de texto y selects dentro de las cajas */
+/* Estilo dentro de las cajas */
 .caja-formulario input,
 .caja-formulario select {
     width: 100%;
@@ -104,7 +99,7 @@ header .redes-sociales {
     box-sizing: border-box;
 }
 
-/* Botones con cambio a color gris al pasar el ratón */
+/* Botones */
 .caja-formulario button {
     background-color: #333;
     color: white;
@@ -117,11 +112,10 @@ header .redes-sociales {
 
 .caja-formulario button:hover {
     background-color: gray;
-    /* Requisito del PDF */
 }
 
 
-/* 5. Contenedor principal inferior */
+/* 5. Parte grande inferior */
 
 .contenedor-flexible-inferior {
     display: flex;
