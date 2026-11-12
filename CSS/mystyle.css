@@ -218,7 +218,7 @@ p.fecha {
 
 /* El icono de la guitarra */
 .menu-lateral a:hover::before {
-    content: url("/Recursos/images/pointer.png");
+    content: url("../Recursos/images/pointer.png");
     margin-right: 8px;
 }
 
@@ -228,7 +228,7 @@ p.fecha {
 }
 
 .proximos-conciertos li:hover::before {
-    content: url("/Recursos/images/pointer.png");
+    content: url("../Recursos/images/pointer.png");
     margin-right: 8px;
 }
 
