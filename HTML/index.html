@@ -24,15 +24,15 @@
     <section class="comun1">
         <div class="caja-formulario">
             <h4>Suscríbete a nuestro boletín</h4>
-            <p>Introduce tu correo electrónico</p>
-            <input type="email" placeholder="xxxxx@xxxxx.xxx" required>
+            <label for="email">Introduce tu correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="xxxxx@xxxxx.xxx" required>
             <button type="submit">Suscribirse</button>
         </div>
         
         <div class="caja-formulario">
             <h4>Artistas destacados</h4>
-            <p>Elige un artista</p>
-            <select required>
+            <label for="artistas-destacados">Elige un artista</label>
+            <select id="artistas-destacados" name="artistas-destacados" required>
                 <option value="">Elige un artista</option>
                 <option value="slipknot">Slipknot</option>
                 <option value="machine-head">Machine Head</option>
@@ -47,10 +47,10 @@
         
         <div class="caja-formulario">
             <h4>Acceso</h4>
-            <p>Usuario</p>
-            <input type="text" placeholder="Introduce tu usuario" required>
-            <p>Contraseña</p>
-            <input type="password" placeholder="Introduce tu contraseña" required>
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Introduce tu usuario" required>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required>
             <button type="submit">Entrar</button>
         </div>
     </section>
