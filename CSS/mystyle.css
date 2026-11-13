@@ -1,5 +1,4 @@
 /* 1. Fuentes y Animaciones */
-
 @font-face {
     font-family: 'Font 1';
     src: url('../Recursos/fonts/encabezado_pie.otf');
@@ -39,7 +38,7 @@ body {
 
 /* 3. Header (elemento común) */
 header {
-    background-color: rgba(78, 2, 255, 0.733);
+    background-color: rgba(170,169,169,0.44);
     font-family: 'Font 1';
     height: 100px;
     display: flex;
@@ -62,7 +61,7 @@ header .redes-sociales {
 
 /* 4. Sección de datos (elemento común) */
 .comun1 {
-    background-color: rgb(99, 117, 167);
+    background-color: rgba(88,146,239,0.82);
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -117,7 +116,6 @@ header .redes-sociales {
 
 
 /* 5. Parte inferior */
-
 .contenedor-flexible-inferior {
     display: flex;
     flex-direction: row;
@@ -150,12 +148,11 @@ p.fecha {
     font-weight: 400;
 }
 
-/* Líneas de próximos conciertos */
+/* Próximos conciertos */
 .seccion-central p.texto-concierto {
     color: white;
     font-size: 1.25rem;
     margin-bottom: 20px;
-    /* Separación */
     line-height: 1.4;
 }
 
@@ -217,7 +214,6 @@ p.fecha {
     padding-left: 25px;
 }
 
-/* 2. Efectos al pasar el ratón en la barra lateral */
 .menu-lateral a:hover,
 .proximos-conciertos li:hover {
     font-style: italic;
@@ -239,13 +235,13 @@ p.fecha {
     background-repeat: no-repeat;
 }
 
-/* Estilo para la foto del artista de la semana */
+/* Foto del artista de la semana */
 .artista-semana img {
     border-radius: 4px;
     margin-top: 10px;
 }
-/* 6. FOOTER (Elemento común) */
 
+/* 6. Footer (Elemento común) */
 footer {
     background-color: rgba(49, 49, 49, 0.82);
     display: flex;
@@ -268,13 +264,16 @@ footer {
     text-decoration: none;
 }
 
+.autor-footer {
+    color: #fcfcfc;
+}
+
 .enlaces-footer a:hover {
     color: red;
 }
 
 
 /* 7. Responsive */
-
 @media (max-width: 768px) {
 
     /* Ocultar iconos de redes sociales en pantalla pequeña */
@@ -295,8 +294,6 @@ footer {
 }
 
 /* Galería de vídeos */
-
-/* Centra el título, subtítulos y vídeos dentro de la columna central */
 .galeria-videos {
     display: flex;
     flex-direction: column;
@@ -326,8 +323,7 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Galería de audios */
-
+/* Audios */
 /* Centra el título, subtítulos y reproductores de audio */
 .galeria-audios {
     display: flex;
@@ -336,7 +332,6 @@ footer {
     text-align: center;
 }
 
-/* Contenedor de cada audio con margen inferior */
 .bloque-audio {
     margin-bottom: 30px;
     width: 100%;
@@ -360,7 +355,6 @@ footer {
 }
 
 /* Galería de fotos */
-
 /* Alineación general a la izquierda para esta sección */
 .galeria-fotos {
     display: flex;
@@ -394,10 +388,7 @@ footer {
     width: 22%;
     /* 4 fotos por fila (con el gap suma ~100%) */
     min-width: 140px;
-    /* REQUISITO PDF: Evita que se reduzcan demasiado en móviles */
-    height: 280px;
-    object-fit: cover;
-    /* Mantiene la proporción de la foto sin deformarla */
+    height:auto;
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
